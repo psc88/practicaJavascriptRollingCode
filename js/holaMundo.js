@@ -22,7 +22,6 @@ document.write('<br>Variable palabra buscada: ' + palabraBuscada + ' como estas 
 
 //modificar el valor de una variable
 palabraBuscada = 'pagina de blog'
-
 document.write('<br>Variable palabra buscada: ' + palabraBuscada);
 
 const comision = 17;
