@@ -59,12 +59,30 @@
 // 9.- Escribe un programa que pida una frase y escriba las vocales que aparecen
 
 // let frase = prompt('Escriba una frase: ');
-// let calculador = frase.length;
+// let contador = frase.length;
 
-// for (let i = 0; i < calculador; i++){
+// for (let i = 0; i < contador; i++){
 //     if (frase.substr(i,1) === "a" || frase.substr(i,1) === "e" || frase.substr(i,1) === "i" || frase.substr(i,1) === "o" || frase.substr(i,1) === "u"){
 //         document.write(frase.substr(i,1))
 //     }
+// }
+// length: sirve para contar cuantos caracteres hay en una frase
+// Substr:
+
+// OTRA FORMA CON BUCLE
+// let frase = prompt("Escriba una frase: ");
+// frase = frase.toLowerCase();
+// let contador = frase.length;
+// for (let vocal = 0; vocal < contador; vocal++) {
+//   if (
+//     frase.charAt(vocal) == "a" ||
+//     frase.charAt(vocal) == "e" ||
+//     frase.charAt(vocal) == "i" ||
+//     frase.charAt(vocal) == "o" ||
+//     frase.charAt(vocal) == "u"
+//   ) {
+//     document.write(frase.charAt(vocal));
+//   }
 // }
 
 // 10.- Escribe un programa que pida un número y nos diga si es divisible por 2, 3, 5 o 7 (sólo hay que comprobar si lo es por uno de los cuatro)
