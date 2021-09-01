@@ -180,3 +180,101 @@
 // }
 
 // document.write('</table>');
+
+// 11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. *
+
+// let nombre1 = prompt('Ingrese primer nombre: ');
+// let edad1 = parseInt(prompt('Ingrese edad: '));
+// let nombre2 = prompt('Ingrese segundo nombre: ');
+// let edad2 = parseInt(prompt('Ingrese edad: '));
+// let nombre3 = prompt('Ingrese tercer nombre: ');
+// let edad3 = parseInt(prompt('Ingrese edad: '));
+
+// let mayor = Math.max(edad1, edad2, edad3);
+
+// if(mayor === edad1){
+//     document.write('El mayor es: ',nombre1)
+// } else if(mayor === edad2){
+//     document.write('El mayor es: ',nombre2)
+// } else if(mayor === edad3){
+//     document.write('El mayor es: ',nombre3)
+// } else {
+//     document.write('error de datos')
+// }
+
+// 12- Realiza un script que genere un número aleatorio entre 1 y 99
+
+// let numeroAleatorio = Math.floor((Math.random()*99)+1);
+// document.write(numeroAleatorio);
+
+// 13- Realiza un script que pida un texto y lo muestre en mayúsculas.
+
+// let text = prompt('Ingrese un trexto: ');
+// text = text.toUpperCase();
+// document.write(text);
+
+// 14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo – entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.
+
+// let text = prompt('Ingrese un texto: ');
+// let longitudDelTexto = text.length
+// let caracter;
+
+// for(let i=0; i<longitudDelTexto; i++){
+//     caracter = text.charAt(i);
+//     if(i===longitudDelTexto-1){
+//         document.write(caracter);
+//     }else {
+//         document.write(caracter+'-');
+//     }
+// }
+
+// 15- Realiza un script que cuente el número de vocales que tiene un texto.
+
+// let text = prompt('Ingrese un texto');
+// let longitudDelTexto = text.length;
+// let textoMayuscula = text.toUpperCase();
+// let caracter;
+// let contador = 0;
+
+// for(let i=0; i<longitudDelTexto;i++){
+//     caracter = textoMayuscula.charAt(i);
+//     if(caracter == 'A' || caracter == 'E' || caracter == 'I' || caracter == 'O' || caracter == 'U'){
+//         contador++;
+//     }
+// }
+// document.write('El numero de vocales es de: ',contador);
+
+// 16- Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.
+
+// let text = prompt('Ingrese un texto');
+// let longitudDelTexto = text.length;
+// let caracter;
+// let salida = '';
+
+// for(i=0; i<longitudDelTexto;i++){
+//     caracter = text.charAt(i);
+//     salida = caracter + salida;
+// }
+
+// document.write(salida);
+
+// 17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
+
+// let vocales = ['a','e','i','o','u'];
+// let texto = prompt('Ingrese un texto: ');
+// let textoMinuscula = texto.toLowerCase();
+// let posicion = 0;
+// let parar = false;
+// for(let i=0; i<textoMinuscula.length;i++){
+//     for(let j=0;j<vocales.length;j++){
+//         if(vocales[j] == textoMinuscula.charAt(i)){
+//             posicion = i+1;
+//             parar = true;
+//             break;
+//         }
+//     }
+//     if(parar){
+//         break;
+//     }    
+// }
+// document.write('La primera vocal esta en la posición ',posicion);
