@@ -69,27 +69,44 @@
 
 // ----------------------------------------------------------------------
 
-// 1- Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el resultado devuelto por la función.
+// 4- Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el resultado devuelto por la función.
 
-let numero = parseInt(prompt('Ingrese un numero: '));
+// let numero = parseInt(prompt('Ingrese un numero: '));
 
-let parImpar = numero => {
+// let parImpar = numero => {
     
-    if(numero % 2 === 0 ){
-        let resultado = document.write('Numero Par');
-        return resultado;
-    } else {
-        let resultado = document.write('Numero Impar');
-        return resultado;
-    }
-}
+//     if(numero % 2 === 0 ){
+//         let resultado = document.write('Numero Par');
+//         return resultado;
+//     } else {
+//         let resultado = document.write('Numero Impar');
+//         return resultado;
+//     }
+// }
 
-parImpar();
+// parImpar(numero);
 
 // ----------------------------------------------------------------------
 
+// 5- Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
 
+// let cadenaTexto = prompt('Ingrese un texto: ');
 
+// let determinarMayusculaMinusculo = (cadenaTexto) => {
+//     if (cadenaTexto == cadenaTexto.toUpperCase()){
+//         return document.write('texto en mayusculas')
+//     } else if (cadenaTexto == cadenaTexto.toLowerCase()){
+//         return document.write('texto en minuscula')
+//     } else {
+//         return document.write('el texto tiene mayusculas y minusculas')
+//     }
+// }
+
+// determinarMayusculaMinusculo(cadenaTexto);
+
+// ----------------------------------------------------------------------
+
+// 3- Solicitar por pantalla al usuario ingresar el valor de los lados de un rectángulo, luego crear una función para calcular su perímetro y mostrarlo por pantalla.
 
 
 
