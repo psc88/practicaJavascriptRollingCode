@@ -181,6 +181,8 @@
 
 // document.write('</table>');
 
+//----------------------------------------------------------------------------------------
+
 // 11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. *
 
 // let nombre1 = prompt('Ingrese primer nombre: ');
@@ -202,16 +204,22 @@
 //     document.write('error de datos')
 // }
 
+//----------------------------------------------------------------------------------------
+
 // 12- Realiza un script que genere un número aleatorio entre 1 y 99
 
 // let numeroAleatorio = Math.floor((Math.random()*99)+1);
 // document.write(numeroAleatorio);
+
+//----------------------------------------------------------------------------------------
 
 // 13- Realiza un script que pida un texto y lo muestre en mayúsculas.
 
 // let text = prompt('Ingrese un trexto: ');
 // text = text.toUpperCase();
 // document.write(text);
+
+//----------------------------------------------------------------------------------------
 
 // 14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo – entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.
 
@@ -227,6 +235,8 @@
 //         document.write(caracter+'-');
 //     }
 // }
+
+//----------------------------------------------------------------------------------------
 
 // 15- Realiza un script que cuente el número de vocales que tiene un texto.
 
@@ -244,6 +254,8 @@
 // }
 // document.write('El numero de vocales es de: ',contador);
 
+//----------------------------------------------------------------------------------------
+
 // 16- Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.
 
 // let text = prompt('Ingrese un texto');
@@ -257,6 +269,8 @@
 // }
 
 // document.write(salida);
+
+//----------------------------------------------------------------------------------------
 
 // 17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
 
