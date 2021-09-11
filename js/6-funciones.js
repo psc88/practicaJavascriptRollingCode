@@ -39,3 +39,4 @@ let iphone = convertirDolaresPesos(1200, dolarBlue);
 
 document.write(`<br> Producto Iphone - precio $ ${iphone} (producto nuevo) `);
 document.write('<br> Podructo PS5 - precio $' +convertirDolaresPesos(500, dolarBlue)+'(ultima version)');
+
