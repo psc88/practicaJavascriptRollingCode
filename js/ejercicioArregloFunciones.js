@@ -1,3 +1,4 @@
+// ---------------------Arrays---------------------------------
 // 1- Crear un array llamado meses y que almacene el nombre de los doce meses del año. Mostrar por pantalla en forma de lista  los doce nombres del arreglo.
 
 // let month = ['January','February','March','April','May','June','July','August','September','October','November','December']
@@ -67,9 +68,9 @@
 //     document.write(`<br>${i+1}° Numero: ${accumulator[i]}`);
 // }
 
-// ----------------------------------------------------------------------
+// ---------------------------Funciones--------------------------------
 
-// 4- Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el resultado devuelto por la función.
+// 1- Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el resultado devuelto por la función.
 
 // let numero = parseInt(prompt('Ingrese un numero: '));
 
@@ -88,7 +89,7 @@
 
 // ----------------------------------------------------------------------
 
-// 5- Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
+// 2- Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
 
 // let cadenaTexto = prompt('Ingrese un texto: ');
 
@@ -107,7 +108,27 @@
 // ----------------------------------------------------------------------
 
 // 3- Solicitar por pantalla al usuario ingresar el valor de los lados de un rectángulo, luego crear una función para calcular su perímetro y mostrarlo por pantalla.
+// La fórmula del perímetro  es p = 2*(a +b)
 
+// let calcularLadosRectangulo = () =>{
+//     let valor1 = parseFloat(prompt('Ingrese valor del lado del rectangulo: '));
+//     let valor2 = parseFloat(prompt('Ingrese valor del segundo lado del rectangulo: '));
+//     let perimetro = 2*(valor1 + valor2);
+//     return perimetro;
+// }
 
+// let perimetro = calcularLadosRectangulo();
+// document.write(`El valor del perimetro del rectangulo es de ${perimetro}.`);
 
+// ----------------------------------------------------------------------
 
+// 4- Escriba un script que muestre la tabla de multiplicar de un número ingresado por pantalla, la creación de la tabla debe ser realizada con una función y mostrar solo los resultados del 1 al 10 del número elegido por el usuario.
+
+// let tablaDeMultiplicar = numero => {
+//     for(let i=1; i<=10; i++){
+//         document.write(`<br>${numero} x ${i} = ${numero * i}`);
+//     }
+// }
+
+// let numero = parseInt(prompt('Ingrese un numero para conocer su tabla de multiplicar: '));
+// tablaDeMultiplicar(numero);
