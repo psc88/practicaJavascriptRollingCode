@@ -2,10 +2,12 @@ let mostrarObjeto = (serieParametro) =>{
     //obtener todas las claves de un objeto como si fuera un arreglo
     let claves = Object.keys(serieParametro);
     console.log(claves); // ['nombre', 'temporada', 'capitulos', 'premios']
+    document.write('<br>Aqui comienza el arreglo')
     for(let i=0; i< claves.length; i++){
         let propiedad = claves[i]
-        document.write(`<br>${propiedad}: ${serieParametro[propiedad]}`)
+        // document.write(`<br>${propiedad}: ${serieParametro[propiedad]}`)
         // serieParametro[clase[i]] => nombre
+        document.write('<br>'+propiedad+': '+serieParametro[propiedad])
     }
 }
 
@@ -17,6 +19,7 @@ let mostrarObjeto = (serieParametro) =>{
 // crear un objeto con notacion literal
 
 let serie = {
+    //clave: 'valor/propiedad'
     nombre: 'the office',
     temporadas: 9,
     genero: 'sticom',
