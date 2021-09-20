@@ -1,6 +1,6 @@
 // Persona -> nombre, apellido, dni, usuario, pass, comision
 // Alumno -> nombre, apellido, dni, usuario, pass, comision, curso, legajo
-// Tutor -> nombre, apellido, dni, usuario, pass, comision, id, antiguedad -- tarea
+// Tutor -> nombre, apellido, dni, usuario, pass, comision, id, antiguedad
 
 class Persona {
   constructor(nombre, apellido, dni, usuario, pass, comision) {
@@ -25,17 +25,50 @@ class Persona {
     document.write(`Nombre: ${this.nombre} Apellido: ${this.apellido}`);
   }
 
-  //  propiedades conmutadas: getters y setters
+  //  propiedades conmutadas: getters
+  get mostrarNombre(){
+    return this.nombre;
+  }
+
+  get mostrarApellido(){
+    return this.apellido;
+  }
+
+  get mostrarDni(){
+    return this.dni;
+  }
+
   get mostrarUsuario() {
     return this.usuario;
+  }
+
+  get mostrarPass() {
+    return this.pass;
   }
 
   get mostrarComision() {
     return this.comision;
   }
+  
+  //  propiedades conmutadas: setters
+  set modificarNombre(nuevoNombre){
+    this.nombre = nuevoNombre;
+  }
+
+  set modificarApellido(nuevoApellido){
+    this.apellido = nuevoApellido;
+  }
 
   set modificarDni(nuevoDni) {
     this.dni = nuevoDni;
+  }
+  
+  set modificarUsuario(nuevoUsuario){
+    this.usuario = nuevoUsuario;
+  }
+
+  set modificarPass(nuevoPass){
+    this.pass = nuevoPass;
   }
 
   set modificarComision(nuevoComision) {
@@ -60,6 +93,42 @@ class Alumno extends Persona {
     <br>Comision: ${this.comision}
     <br>Legajo: ${this.legajo}
     <br>Curso: ${this.curso}`);
+  }
+}
+
+class Tutor extends Persona {
+  constructor(nombre, apellido, dni, usuario, pass, comision, id, antiguedad) {
+    super(nombre, apellido, dni, usuario, pass, comision);
+    this.id = id;
+    this.antiguedad = antiguedad;
+    this.estado = true;
+  }
+
+  mostarDatos() {
+    document.write(`Nombre: ${this.nombre} 
+    <br>Apellido: ${this.apellido}
+    <br>DNI: ${this.dni}
+    <br>Usuario: ${this.usuario}
+    <br>Pass: ${this.pass}
+    <br>Comision: ${this.comision}
+    <br>Id: ${this.id}
+    <br>Antiguedad: ${this.antiguedad}`);
+  }
+
+  get mostrarId(){
+    return this.id;
+  }
+
+  get mostrarAntiguedad(){
+    return this.antiguedad;
+  }
+
+  set modificarId(nuevoId){
+    this.id = nuevoId;
+  }
+
+  set modificarAntiguedad(nuevoAntiguedad){
+    this.antiguedad = nuevoAntiguedad;
   }
 }
 
@@ -89,3 +158,9 @@ let jonathan = new Alumno(
   "FullStack"
 );
 jonathan.mostarDatos();
+
+document.write("<br>** Mostrando datos de un Tutor**<br>");
+let Emilse = new Tutor('Emilse', 'Arias', 32456741, 'earias', 'dkvmkw456', '17i', 1457, '2 años')
+
+Emilse.mostarDatos();
+
