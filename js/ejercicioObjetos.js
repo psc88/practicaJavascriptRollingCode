@@ -270,64 +270,64 @@
 // Crear al menos 2 objetos libros y utilizar el método mostrarLibro();
 // Por último, indicar cuál de los 2 objetos “libros” tiene más páginas.
 
-class Libro {
-  constructor(isbn, titulo, autor, numeroDePagina) {
-    (this.isbn = isbn),
-      (this.titulo = titulo),
-      (this.autor = autor),
-      (this.numeroDePagina = numeroDePagina)
-  }
+// class Libro {
+//   constructor(isbn, titulo, autor, numeroDePagina) {
+//     (this.isbn = isbn),
+//       (this.titulo = titulo),
+//       (this.autor = autor),
+//       (this.numeroDePagina = numeroDePagina)
+//   }
 
-  get mostrarIsbn() {
-    return this.isbn;
-  }
-  get mostrarTitulo() {
-    return this.titulo;
-  }
-  get mostrarAutor() {
-    return this.autor;
-  }
-  get mostrarNumeroDePaginas() {
-    return this.numeroDePagina;
-  }
-  set modificarIsbn(nuevoIsbn) {
-    this.isbn = nuevoIsbn;
-  }
-  set modificarTitulo(nuevoTitulo) {
-    this.isbn = nuevoTitulo;
-  }
-  set modificarAutor(nuevoAutor) {
-    this.isbn = nuevoAutor;
-  }
-  set modificarNumeroDePagina(nuevoNumeroDePagina) {
-    this.isbn = nuevoNumeroDePagina;
-  }
+//   get mostrarIsbn() {
+//     return this.isbn;
+//   }
+//   get mostrarTitulo() {
+//     return this.titulo;
+//   }
+//   get mostrarAutor() {
+//     return this.autor;
+//   }
+//   get mostrarNumeroDePaginas() {
+//     return this.numeroDePagina;
+//   }
+//   set modificarIsbn(nuevoIsbn) {
+//     this.isbn = nuevoIsbn;
+//   }
+//   set modificarTitulo(nuevoTitulo) {
+//     this.isbn = nuevoTitulo;
+//   }
+//   set modificarAutor(nuevoAutor) {
+//     this.isbn = nuevoAutor;
+//   }
+//   set modificarNumeroDePagina(nuevoNumeroDePagina) {
+//     this.isbn = nuevoNumeroDePagina;
+//   }
 
-  mostrarLibro() {
-    document.write(
-      `El libro ${this.mostrarTitulo} con ISBN ${this.mostrarIsbn}, creado por el autor ${this.mostrarAutor} tiene ${this.mostrarNumeroDePaginas} páginas`
-    );
-  }
-}
+//   mostrarLibro() {
+//     document.write(
+//       `El libro ${this.mostrarTitulo} con ISBN ${this.mostrarIsbn}, creado por el autor ${this.mostrarAutor} tiene ${this.mostrarNumeroDePaginas} páginas`
+//     );
+//   }
+// }
 
-let libro1 = new Libro(123, "El diario de Ana Frank", "Ana Frank", 190);
-let libro2 = new Libro(321, "El gran libro de los sueños", "Emilio Salas", 400);
-let libros = [libro1, libro2];
-let numero = 0;
+// let libro1 = new Libro(123, "El diario de Ana Frank", "Ana Frank", 190);
+// let libro2 = new Libro(321, "El gran libro de los sueños", "Emilio Salas", 400);
+// let libros = [libro1, libro2];
+// let numero = 0;
 
-document.write("**** Libro 1 ****<br>");
-libro1.mostrarLibro();
-document.write("<br>**** Libro 2 ****<br>");
-libro2.mostrarLibro();
+// document.write("**** Libro 1 ****<br>");
+// libro1.mostrarLibro();
+// document.write("<br>**** Libro 2 ****<br>");
+// libro2.mostrarLibro();
 
-document.write("<br>");
-for (let i = 0; i < 2; i++) {
-  let cantidadDePaginas = libros[i].mostrarNumeroDePaginas;
-  if(cantidadDePaginas > numero){
-      numero =  cantidadDePaginas;
-  }
-}
-document.write(`El libro con mayores paginas tiene ${numero}`);
+// document.write("<br>");
+// for (let i = 0; i < 2; i++) {
+//   let cantidadDePaginas = libros[i].mostrarNumeroDePaginas;
+//   if(cantidadDePaginas > numero){
+//       numero =  cantidadDePaginas;
+//   }
+// }
+// document.write(`El libro con mayores paginas tiene ${numero}`);
 
 // -----------------------------------------------------------------------------
 
@@ -346,3 +346,151 @@ document.write(`El libro con mayores paginas tiene ${numero}`);
 // huecosLibres(): indica cuántos contactos más podemos ingresar.
 
 // Crea un menú con opciones por consola para probar todas estas funcionalidades.
+class Contacto {
+  constructor(nombre, telefono) {
+    this.nombre = nombre;
+    this.telefono = telefono;
+  }
+
+  mostrarDatos() {
+    document.write(`Nombre: ${this.nombre} Telefono: ${this.telefono}`);
+  }
+
+  get obtenerNombre() {
+    return this.nombre;
+  }
+
+  get obtenerTelefono() {
+    return this.telefono;
+  }
+
+  set modificarNombre(nuevoNombre) {
+    this.nombre = nuevoNombre;
+  }
+
+  set modificarTelefono(nuevoTelefono) {
+    this.telefono = nuevoTelefono;
+  }
+}
+
+class Agenda {
+  constructor(tamanio) {
+    this.contacto = [];
+    this.tamanio = tamanio;
+  }
+
+  set mofificarTamanio(nuevoTamanio) {
+    this.tamanio = nuevoTamanio;
+  }
+
+  anadirContacto() {
+    if (!this.existeContacto(contacto)) {
+      console.log("El contacto ya existe no se puede agregar");
+    } else {
+      if (!this.AgendaLlena()) {
+        this.contacto.push(contacto);
+        console.log("contacto añadido");
+        this.listarContacto();
+      }
+    }
+  }
+
+  existeContacto(contacto) {
+    const exist = this.contactos.find(
+      (contactoExistente) => contactoExistente.nombre === contacto.nombre
+    );
+    // console.log('dentro de existeContacto ' + exist);
+    if (exist) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  listarContactos() {
+    for (let i = 0; i < this.contactos.length; i++) {
+      console.log(
+        `Contacto: ${this.contactos[i].obtenerNombre} Telefono: ${this.contactos[i].obtenerTelefono}`
+      );
+    }
+  }
+
+  buscarContacto(contacto) {
+    const encontrado = this.contactos.find(
+      (existentes) => existentes.nombre === contacto
+    );
+    if (encontrado) {
+      console.log("contacto encontrado ");
+    } else {
+      console.log("Este contacto no existe");
+    }
+  }
+
+  eliminarContacto(contacto) {
+    let contactosFiltrados = this.contactos.filter(
+      (contactoExistente) => contactoExistente.nombre != contacto.nombre
+    );
+    console.log("contactos que deberian quedar" + contactosFiltrados);
+  }
+
+  agendaLlena() {
+    if (this.contactos.length === this.tamanio) {
+      console.log("agenda llena");
+      return true;
+    } else {
+      console.log("queda espacio");
+      return false;
+    }
+  }
+
+  huecosLibres() {
+    let cantidadEspacios = this.tamanio - this.contactos.length2;
+    console.log("Cantidad de espacio disponible " + cantidadEspacios);
+  }
+}
+
+let agendaPrueba = new Agenda(10);
+
+do {
+  let opcion = parseInt(
+    prompt(
+      "Seleccione una opcion: 1- agregar contacto, 2- cambiar tamaño de agenda, 3- listar contactos, 4- buscar contacto"
+    )
+  );
+
+  switch (opcion) {
+    case 1:
+      // agregar contacto solo si la agenda tiene huecos libres
+
+      agendaPrueba.huecosLibres();
+
+      let nombre = prompt("ingrese un nombre");
+      let telefono = prompt("ingrese un telefono");
+      let nuevoContacto = new Contacto(nombre, telefono);
+
+      agendaPrueba.agregarContacto(nuevoContacto);
+      break;
+    case 2:
+      // cambiar tamaño
+      let nuevoTamanio = parseInt(
+        prompt("ingrese la cantidad de contactos que desea tener")
+      );
+      agendaPrueba.modificarTamanio = nuevoTamanio;
+      console.log(
+        "Tamaño de agenda modificado, cantidad actual: " + nuevoTamanio
+      );
+
+      break;
+    case 3:
+        // listar contactos
+        agendaPrueba.listarContactos();
+        break;
+    case 4:
+        // buscar contacto
+        let contactoBuscado = prompt('ingrese el nombre que busca');
+        agendaPrueba.buscarContacto(contactoBuscado);
+        break;
+    default:
+      document.write("Ingreso una opcion invalida");
+  }
+} while (confirm("quiere realizar otra operacion?"));
